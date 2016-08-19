@@ -1,0 +1,92 @@
+@import '../../../../shared/styles/_shared';
+
+.global-list {
+  display: flex;
+}
+
+.global {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.global-list-button {
+  transition: $duration;
+  position: relative;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  padding: 0 60px 0 40px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:after {
+    transition: $duration;
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 40px;
+    width: 10px;
+    height: 2px;
+    background: #000;
+    transform: rotate(45deg);
+  }
+  &:before {
+    transition: $duration;
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 34px;
+    width: 10px;
+    height: 2px;
+    background: #000;
+    transform: rotate(-45deg);
+  }
+  &.on {
+    color: $blue;
+    border-color: $blue;
+  }
+  &.on:before {
+    right: 40px;
+    transform: rotate(-225deg);
+    background-color: $blue;
+  }
+  &.on:after {
+    right: 34px;
+    transform: rotate(225deg);
+    background-color: $blue;
+  }
+}
+
+.local-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 40px 5px 40px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.local-list-item {
+  padding: 0 5px 5px 0;
+}
+
+.local-list-button {
+  transition: $duration;
+  display: block;
+  padding: 5px 15px;
+  font-size: 14px;
+  background: #d9d9d9;
+  border-radius: 1px;
+
+  &.on,
+  &:hover {
+    color: #fff;
+    background: $blue;
+  }
+  &.on:hover {
+    opacity: 0.5;
+  }
+}

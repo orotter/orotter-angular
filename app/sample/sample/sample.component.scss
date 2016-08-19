@@ -1,0 +1,9 @@
+@import '../../shared/styles/_shared';
+
+:host {
+    display: block;
+}
+
+.body {
+    min-width: $inner-width;
+}
