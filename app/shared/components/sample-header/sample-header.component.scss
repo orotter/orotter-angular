@@ -1,0 +1,10 @@
+@import '../../styles/_shared';
+
+:host {
+  display: block;
+  min-width: $inner-width;
+  padding: 25px 0;
+  background: $black;
+  color: $white;
+  text-align: center;
+}

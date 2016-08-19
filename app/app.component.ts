@@ -1,27 +1,14 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
-import { APP_ROUTER_PRECOMPILES } from './app.routes';
-import { HeaderComponent, FooterComponent } from './shared';
-
-interface AppState {
-  like: number
-}
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app',
   template: `
-<div>Sample component</div>
-`,
-  directives: [
-    ROUTER_DIRECTIVES,
-    HeaderComponent,
-    FooterComponent
-  ],
-  precompile: APP_ROUTER_PRECOMPILES,
-  styles: [require('./app.component.scss')],
-  encapsulation: ViewEncapsulation.None
+<sample-header></sample-header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<sample-footer></sample-footer>
+`
 })
 export class AppComponent {
-  constructor(){
-  }
 }

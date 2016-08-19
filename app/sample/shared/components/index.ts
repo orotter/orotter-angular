@@ -1,5 +1,0 @@
-export * from './article-detail/article-detail.component'
-export * from './article-list/article-list.component'
-export * from './comment-form/comment-form.component'
-export * from './comment-list/comment-list.component'
-export * from './search-menu/search-menu.component'

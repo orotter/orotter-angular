@@ -1,0 +1,7 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "tslint.enable": true,
+    "tslint.configFile": "./tslint.json",
+    "css.validate": true,
+    "javascript.validate.enable": false
+}
