@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch --inline --history-api-fallback",
-    "build": "build",
+    "build": "webpack",
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
