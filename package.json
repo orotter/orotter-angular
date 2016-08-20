@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.dev.js --watch --inline --history-api-fallback --host 0.0.0.0",
+    "start": "webpack-dev-server --watch --inline --history-api-fallback",
+    "build": "webpack",
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
