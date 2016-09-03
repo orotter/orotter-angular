@@ -10,13 +10,26 @@ export class SampleService {
   constructor(
     private http: Http
   ) {
-    // let _build = http['_backend']['_browserXHR']['build'];
-    // http['_backend']['_browserXHR']['build'] = () => {
-    //   let _xhr = _build(); _xhr.withCredentials = true; 
-    //   return _xhr;
-    // };
+    let _build = http['_backend']['_browserXHR']['build'];
+    http['_backend']['_browserXHR']['build'] = () => {
+      let _xhr = _build(); _xhr.withCredentials = true; 
+      return _xhr;
+    };
   }
 
+  login(username: string, password: string): Promise<any> {
+    var url = `http://128.199.191.99/api/v1/u/login?username=${username}&password=${password}`;
+    return new Promise<any>((resolve, reject) => {
+      this.http.get(url)
+        .subscribe(response => {
+          var data = response.json();
+          var user = data.user;
+          console.log(user);
+          resolve(user);
+        });
+    });
+  }
+  
   getSampleList(): Promise<Sample[]> {
     return new Promise<Sample[]>((resolve, reject) => {
       resolve([
