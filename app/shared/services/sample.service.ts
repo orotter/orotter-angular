@@ -10,6 +10,11 @@ export class SampleService {
   constructor(
     private http: Http
   ) {
+    // let _build = http['_backend']['_browserXHR']['build'];
+    // http['_backend']['_browserXHR']['build'] = () => {
+    //   let _xhr = _build(); _xhr.withCredentials = true; 
+    //   return _xhr;
+    // };
   }
 
   getSampleList(): Promise<Sample[]> {
