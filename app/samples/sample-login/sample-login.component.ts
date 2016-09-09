@@ -30,8 +30,6 @@ export class SampleLoginComponent {
   }
   username: string = "";
   password: string = "";
-  ngOnInit() {
-  }
   loginButtonClicked() {
       this.sampleService
         .login(this.username, this.password)

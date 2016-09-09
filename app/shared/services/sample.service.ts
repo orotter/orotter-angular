@@ -18,15 +18,18 @@ export class SampleService {
   }
 
   login(username: string, password: string): Promise<any> {
-    var url = `http://128.199.191.99/api/v1/u/login?username=${username}&password=${password}`;
+    // var url = `http://128.199.191.99/api/v1/u/login?username=${username}&password=${password}`;
     return new Promise<any>((resolve, reject) => {
-      this.http.get(url)
-        .subscribe(response => {
-          var data = response.json();
-          var user = data.user;
-          console.log(user);
-          resolve(user);
-        });
+      // this.http.get(url)
+      //   .subscribe(response => {
+      //     var data = response.json();
+      //     var user = data.user;
+      //     console.log(user);
+      //     resolve(user);
+      //   });
+      resolve({
+        name: 'Test'
+      });
     });
   }
   
