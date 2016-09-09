@@ -8,7 +8,7 @@
 # How to setup
 
 ```
-$ git clone git@github.com:balmychan/angular2-sample.git
+$ git clone https://github.com/balmychan/angular2-sample.git
 $ cd angular2-sample
 $ npm install
 $ npm start
