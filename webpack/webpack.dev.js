@@ -22,7 +22,13 @@ module.exports = webpackMerge(commonConfig, {
 
     // Dev server options
     devServer: {
-        outputPath: helpers.root('dist')
+        port: 3000,
+        outputPath: helpers.root('dist'),
+        proxy: {
+            '/api': {
+                target: 'http://orotter.com'
+            }
+        }
     },
 
     plugins: [

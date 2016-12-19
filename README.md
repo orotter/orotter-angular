@@ -2,29 +2,21 @@
 
 |Name|Version|
 | --- | --- |
-|node|4.2.1|
-|npm|2.14.7|
+|node|6.9.1|
+|npm|3.10.8|
 
 # How to setup
 
-## Clone
-
-```
-$ git clone git@github.com:balmychan/angular2-sample.git
-```
-
-Or
-
-```
-$ git clone https://github.com/balmychan/angular2-sample.git
-```
-
-## Launch application
-
-```
-$ cd angular2-sample
+```sh
+$ git clone https://github.com/orotter/orotter-angular.git
+$ cd orotter-angular
 $ npm install
 $ npm start
 ```
 
-Open [http://localhost:8080](http://localhost:8080)
+Open [http://localhost:3000](http://localhost:3000)
+
+# TODO
+
+- [ ] ツイート一覧画面
+- [ ] ツイート投稿機能

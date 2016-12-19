@@ -22,7 +22,6 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.ts$/, loader: 'ts-loader' },
-            
             // For common *.scss 
             { test: /\^(?!.*component).*\.scss$/, loaders: ['style', 'css', 'sass'] },
             // For component scss like `button.component.scss`
