@@ -1,1 +1,0 @@
-export var styleVars = require('./_variables.scss');
